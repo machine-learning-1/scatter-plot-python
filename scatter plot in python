@@ -1,0 +1,24 @@
+import csv
+import random
+import math
+import numpy as np
+from matplotlib import pyplot as plt
+import numpy as np
+
+datos = [[1,2,0],[2,2,0],[2,3,0],[3,1,0],[3,2,0],[9,12,1],[8,8,1],[8,7,1],[8,9,1],[7,10,1]]
+features = zip(*datos)
+x = features[0]
+y = features[1]
+
+N = len(x)
+colors = []
+print colors
+for i in range(N):
+	if datos[i][-1] == 0:
+		colors.append(0.52160121)
+	else:
+		colors.append(0.75089678)
+
+area = np.pi*20  # 0 to 15 point radiuses
+plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+plt.show()
